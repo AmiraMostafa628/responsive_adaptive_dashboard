@@ -16,9 +16,7 @@ class WelcomeHeader extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
               child: Text("Hello, Amira!",
-                style: AppStyles.styleBold28(context).copyWith(
-
-                ),
+                style: AppStyles.styleBold28(context),
 
               ),
             ),
