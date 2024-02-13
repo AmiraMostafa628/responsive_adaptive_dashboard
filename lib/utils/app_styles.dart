@@ -130,7 +130,7 @@ double getScaleFactor(BuildContext context){
   }
   else
   {
-    return width/1350;
+    return width/1920;
   }
 }
 

@@ -12,22 +12,14 @@ class WelcomeHeader extends StatelessWidget {
       children: [
         Expanded(
           child: ListTile(
-            title:FittedBox(
-              fit: BoxFit.scaleDown,
-              alignment: AlignmentDirectional.centerStart,
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                child: Text("Hello, Amira!",
-                  style: AppStyles.styleBold28(context),
-                ),
+            title:Padding(
+              padding: const EdgeInsets.only(bottom: 8.0),
+              child: Text("Hello, Amira!",
+                style: AppStyles.styleBold28(context),
               ),
             ),
-            subtitle: FittedBox(
-              fit: BoxFit.scaleDown,
-              alignment: AlignmentDirectional.centerStart,
-              child: Text('Send and receive funds with pleasure.',
-                style: AppStyles.styleRegular16(context),
-              ),
+            subtitle: Text('Send and receive funds with pleasure.',
+              style: AppStyles.styleRegular16(context),
             ),
 
           ),
