@@ -20,9 +20,13 @@ class WelcomeHeader extends StatelessWidget {
 
               ),
             ),
-            Text('Send and receive funds with pleasure.',
-              style: AppStyles.styleRegular16(context),
-            ),
+           MediaQuery.of(context).size.width < 420?
+           Text('Send and receive funds \n with pleasure.',
+             style: AppStyles.styleRegular16(context),
+           ) : Text('Send and receive funds with pleasure.',
+             style: AppStyles.styleRegular16(context),
+           ),
+
           ],
         ),
        const Spacer(),
