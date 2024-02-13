@@ -10,21 +10,24 @@ class WelcomeHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
-          child: ListTile(
-            title:Padding(
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
               child: Text("Hello, Amira!",
-                style: AppStyles.styleBold28(context),
+                style: AppStyles.styleBold28(context).copyWith(
+                    fontSize: 18
+                ),
+
               ),
             ),
-            subtitle: Text('Send and receive funds with pleasure.',
+            Text('Send and receive funds with pleasure.',
               style: AppStyles.styleRegular16(context),
             ),
-
-          ),
+          ],
         ),
-        const Spacer(),
+       const Spacer(),
         const CustomButton(title: 'Add Payment +',),
         const SizedBox(
           width: 8,
