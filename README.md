@@ -4,8 +4,6 @@
 <img src=https://github.com/AmiraMostafa628/responsive_adaptive_dashboard/assets/103458291/37977a4e-3b96-452f-a167-3c8506614b69.jpg />
 <img src=https://github.com/AmiraMostafa628/responsive_adaptive_dashboard/assets/103458291/e56c9c1f-e39d-4fef-bb14-5b8fa80c5c3c.jpg />
 
-
-)
 # responsive_adaptive_dashboard
 
 A new Flutter project.
