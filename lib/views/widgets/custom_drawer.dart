@@ -3,8 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_adaptive_dashboard/models/drawer_item_model.dart';
 import 'package:responsive_adaptive_dashboard/utils/app_images.dart';
 import 'package:responsive_adaptive_dashboard/utils/app_styles.dart';
+import 'package:responsive_adaptive_dashboard/utils/size_config.dart';
 import 'package:responsive_adaptive_dashboard/views/widgets/active_and_inactive_drawer_item.dart';
 import 'package:responsive_adaptive_dashboard/views/widgets/custom_drawer_list_view.dart';
+import 'package:responsive_adaptive_dashboard/views/widgets/user_info.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({Key? key}) : super(key: key);
@@ -16,9 +18,9 @@ class CustomDrawer extends StatelessWidget {
       color: const Color(0xFF151718),
       child: CustomScrollView(
         slivers: [
-          const SliverToBoxAdapter(
+           SliverToBoxAdapter(
             child: SizedBox(
-              height: 12,
+              height: MediaQuery.sizeOf(context).width < SizeConfig.tablet ?30 :12,
             ),
           ),
           SliverToBoxAdapter(
@@ -38,6 +40,28 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           const CustomDrawerListView(),
+          const SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 12.0),
+              child: Divider(
+                height: 24,
+                color: Color(0xFF303031),
+              ),
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: Column(
+              children: [
+                InActiveDrawerItem(itemModel: DrawerItemModel(image: AppImages.help,
+                  title: 'Help'
+                )),
+                InActiveDrawerItem(itemModel: DrawerItemModel(image: AppImages.setting,
+                    title: 'Setting'
+                )),
+
+              ],
+            ),
+          ),
           const SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
@@ -47,24 +71,26 @@ class CustomDrawer extends StatelessWidget {
                     height: 20,
                   ),
                 ),
-                InActiveDrawerItem(itemModel: DrawerItemModel(image: AppImages.help,
-                  title: 'Help'
-                )),
-                InActiveDrawerItem(itemModel: DrawerItemModel(image: AppImages.setting,
-                    title: 'Setting'
-                )),
+                Divider(
+                  height: 48,
+                  color: Color(0xFF303031),
+                ),
+                UserInfo(),
                 SizedBox(
                   height: 20,
-                )
+                ),
 
               ],
             ),
-          )
+          ),
+
 
         ],
       ),
     );
   }
 }
+
+
 
 

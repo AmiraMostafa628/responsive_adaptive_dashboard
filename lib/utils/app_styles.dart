@@ -84,7 +84,14 @@ abstract class AppStyles{
       fontWeight: FontWeight.w500,
     );
   }
-
+  static TextStyle styleRegular13(context){
+    return TextStyle(
+      color: const Color(0xFF747475),
+      fontSize: getResponsiveFontSize(context, fontSize: 13),
+      fontFamily: 'Inter',
+      fontWeight: FontWeight.w400,
+    );
+  }
   static TextStyle styleMedium12(context){
     return TextStyle(
       color: const Color(0xFF848484),
@@ -130,7 +137,7 @@ double getScaleFactor(BuildContext context){
   }
   else
   {
-    return width/1920;
+    return width/1600;
   }
 }
 
